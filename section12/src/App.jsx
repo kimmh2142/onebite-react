@@ -6,8 +6,6 @@ import New from './pages/New'
 import Notfound from './pages/Notfound'
 
 
-// Link컴포넌트 : 클라이언트 사이드 렌더링 
-// useNavigate : 이벤트 핸들러 함수 안에서 특정 조건에 따라 페이지 이동
 function App() {
   const nav = useNavigate();
 
@@ -26,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
-        <Route path="/diary" element={<Diary />} />
+        <Route path="/diary/:id" element={<Diary />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </>
