@@ -4,11 +4,10 @@ import Home from './pages/Home'
 import Diary from './pages/Diary'
 import New from './pages/New'
 import Notfound from './pages/Notfound'
+import Button from './componeents/Button'
+import Header from './componeents/Header'
 
 import { getEmotionImage } from './util/get-emotion-image'
-// 이모지를 pubic 폴더안에 넣으면
-// <img src={"/emotion.png"} /> 식 경로로 불러온다.
-// but, vite가 제공하는 이미지 최적화 안됌
 
 function App() {
   const nav = useNavigate();
@@ -19,19 +18,27 @@ function App() {
 
   return (
     <>
-      <div>
-        <img src={getEmotionImage(1)} />
-        <img src={getEmotionImage(2)} />
-        <img src={getEmotionImage(3)} />
-        <img src={getEmotionImage(4)} />
-        <img src={getEmotionImage(5)} />
-      </div>
-      <div>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/new"}>New</Link>
-        <Link to={"/diary"}>Diary</Link>
-      </div>
-      <button onClick={onClickButton}>New 페이지로 이동</button>
+      <Header title={"Header"} 
+        leftChild={<Button text={"Left"} />}
+        rightChild={<Button text={"Right"} />}
+      />
+
+      <Button 
+        text={123} 
+        onClick={()=>{console.log("sss");}}
+      />
+
+      <Button 
+        text={123} 
+        type={"POSITIVE"}
+        onClick={()=>{console.log("sss");}}
+      />
+
+      <Button 
+        text={123} 
+        type={"NEGATIVE"}
+        onClick={()=>{console.log("sss");}}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
@@ -42,5 +49,5 @@ function App() {
   );
 }
 
-export default App
+export default App;
  
