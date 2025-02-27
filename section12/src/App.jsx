@@ -89,11 +89,7 @@ function App() {
 
   return (
     <>
-      <Header title={"Header"} 
-        leftChild={<Button text={"Left"} />}
-        rightChild={<Button text={"Right"} />}
-      />
-      <DiaryStateContext.Provider value={date}>
+      <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider
         value={{
           onCreate,
