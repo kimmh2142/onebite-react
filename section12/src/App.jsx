@@ -42,6 +42,8 @@ function reducer(state,action){
       return state.filter(
         (item) => String(item.id) !== String(action.id)
       );
+    default:
+      return state;
   }
 }
 

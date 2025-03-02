@@ -1,14 +1,17 @@
-import { useSearchParams } from "react-router-dom"
+import Header from "../components/Header"
+import Button from "../components/Button";
+import DiaryList from "../components/DiaryList";
 
 const Home = () => {
-
-    // QueryString 방식
-    const [params,setParams] = useSearchParams();
-    // params : QueryString으로 전달한 변수와 값 
-    // setParams : 특정 QueryString의 값을 변경 할 수 있는 함수 
-    
-
-    return <div>Home</div>
-}
+    return (
+        <div>
+            <Header title={"2025년 3월"} 
+                leftChild={<Button text={"<"} />}
+                rightChild={<Button text={">"}/>}
+            />
+            <DiaryList />
+        </div>
+    );
+};
 
 export default Home
