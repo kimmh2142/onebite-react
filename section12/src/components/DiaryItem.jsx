@@ -3,7 +3,7 @@ import Button from "./Button";
 import "./DiaryItem.css"
 import { useNavigate } from "react-router-dom";
 
-const DiaryItem = ({id,emotionId,createdDate,conntent}) => {
+const DiaryItem = ({id,emotionId,createdDate,content}) => {
   const nav = useNavigate();
 
   return (
@@ -22,7 +22,7 @@ const DiaryItem = ({id,emotionId,createdDate,conntent}) => {
           {new Date(createdDate).toLocaleDateString()}
         </div>
         <div className="content">
-          {conntent}
+          {content}
         </div>
       </div>
 

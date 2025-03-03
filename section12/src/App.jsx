@@ -66,7 +66,7 @@ function App() {
   const onCreate = (createdDate, emotionId, content) => {
     dispatch({
       type: "CREATE",
-      date: {
+      data: {
         id: idRef.current++,
         createdDate,
         emotionId,

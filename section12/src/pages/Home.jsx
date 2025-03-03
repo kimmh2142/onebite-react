@@ -7,7 +7,7 @@ import DiaryList from "../components/DiaryList";
 
 
 const getMonthlyData = (pivotDate, data) => {
-
+    console.log("Home에서 받은 data:", data); // 디버깅용 로그 추가
     const beginTime = new Date(
         pivotDate.getFullYear(), 
         pivotDate.getMonth(),
